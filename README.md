@@ -55,7 +55,7 @@ tecemer-lab1/
 
 ## Autor
 
-Richard torres areche 46824
+Richard torres areche46824
 
 ## Curso
 
