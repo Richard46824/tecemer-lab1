@@ -60,3 +60,18 @@ Richard torres areche46824
 ## Curso
 
 Tecnologías Emergentes — IS046B
+## Flujo de datos — Semana 2
+
+### Fuente
+Los datos meteorológicos se obtienen mediante la API Open-Meteo para la ciudad de Huancayo.
+
+### Transformación
+Los datos se almacenan en formato JSON y CSV. Luego se procesan utilizando Pandas para convertir las fechas, calcular la amplitud térmica, identificar los días lluviosos y clasificar las temperaturas en las categorías "cálido" y "templado".
+
+### Salida
+Se generan los siguientes archivos:
+
+- `pronostico_huancayo.json`
+- `pronostico_huancayo.csv`
+- `pronostico_huancayo_procesado.csv`
+- `resumen_por_categoria.csv`
