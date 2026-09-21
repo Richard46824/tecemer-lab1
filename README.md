@@ -75,3 +75,13 @@ Se generan los siguientes archivos:
 - `pronostico_huancayo.csv`
 - `pronostico_huancayo_procesado.csv`
 - `resumen_por_categoria.csv`
+## Cierre de la Unidad I — Semana 3
+
+Herramienta de automatización: organizador.py clasifica y mueve archivos
+de una carpeta en subcarpetas por tipo (Documentos, Imagenes, Videos,
+Comprimidos, Otros), con modo de simulacion (--dry-run) mediante argparse.
+
+Uso:
+
+```bash
+python organizador.py <carpeta> [--dry-run]
