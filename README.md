@@ -85,3 +85,11 @@ Uso:
 
 ```bash
 python organizador.py <carpeta> [--dry-run]
+## Cierre de la Unidad I — Semana 5
+
+### Ejercicios de redes neuronales
+
+- `Ejercicio_01_Preprocesamiento_Exploracion_Datos.ipynb`: preprocesamiento y exploración de datos.
+- `Ejercicio_02_Perceptron_MLP.ipynb`: perceptrón simple y perceptrón multicapa (MLP).
+
+Material desarrollado en Google Colab para comprender el procesamiento de datos y los fundamentos de las redes neuronales.
