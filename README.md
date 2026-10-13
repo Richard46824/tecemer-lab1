@@ -2,6 +2,16 @@
 
 Proyecto de práctica desarrollado en Python para el curso de Tecnologías Emergentes. En este proyecto se trabaja la estructura `src-layout`, la instalación editable y buenas prácticas de código.
 
+## Índice de prácticas
+
+| Semana | Contenido | Carpeta |
+|---|---|---|
+| 1 | Configuración del proyecto y ejercicios introductorios de Python y NumPy | [semana01](semana01/README.md) |
+| 2 | API Open-Meteo, datos de Huancayo y análisis con Pandas | [semana02](semana02/README.md) |
+| 3 | Organizador de archivos y pruebas con pytest | [semana03](semana03/README.md) |
+| 4 | Preparación de datos y clasificación de días lluviosos con MLP | [semana04](semana04/README.md) |
+| 5 | Ejercicios de redes neuronales, CNN, RNN y evaluación de modelos | [semana05](semana05/README.md) |
+
 ## Instalación
 
 ### 1. Crear el entorno virtual
