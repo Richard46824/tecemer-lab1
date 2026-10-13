@@ -1,0 +1,31 @@
+name: Pruebas de Python
+
+on:
+  push:
+    branches:
+      - main
+      - chore/organizar-por-semanas
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pruebas-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias de las pruebas
+        run: python -m pip install --upgrade pip pytest numpy pandas scikit-learn
+
+      - name: Ejecutar pruebas del organizador
+        run: python -m pytest semana03/test_organizador.py -v
+
+      - name: Ejecutar pruebas de preparación de datos
+        run: python -m pytest semana04/tests/test_preparacion.py -v
