@@ -25,6 +25,7 @@ El trabajo comprende la preparación de los datos, el entrenamiento de una red n
 - `clasificador_lluvia.py`: entrena y evalúa el clasificador.
 - `predecir.py`: realiza predicciones con el modelo entrenado.
 - `dataset_preparado.npz`: datos preparados para entrenamiento.
+- `escalador_lluvia.joblib`: escalador ajustado solo con el conjunto de entrenamiento y reutilizado en predicciones.
 - `modelo_lluvia.keras`: modelo neuronal entrenado.
 - `curvas_entrenamiento_lluvia.png` y `curvas_entrenamiento_sintetico.png`: curvas generadas durante el entrenamiento.
 - `tests/test_preparacion.py`: pruebas automatizadas.
@@ -45,7 +46,8 @@ Abre la terminal dentro de esta carpeta para respetar las rutas relativas de los
 cd semana04
 python preparar_dataset.py
 python clasificador_lluvia.py
+python predecir.py
 python -m pytest tests/ -v
 ```
 
-Ejecuta los pasos según los archivos de datos disponibles. El entrenamiento requiere las bibliotecas indicadas arriba.
+Ejecuta los pasos en ese orden y desde esta carpeta. `predecir.py` requiere que existan `modelo_lluvia.keras` y `escalador_lluvia.joblib`, generados por los pasos anteriores. Para predecir, modifica en `predecir.py` las temperaturas máximas y mínimas de `temperaturas_nuevas`; el programa calcula la amplitud térmica y aplica el mismo escalador usado durante el entrenamiento. El entrenamiento requiere las bibliotecas indicadas arriba.
