@@ -1,57 +1,106 @@
-# Laboratorio Tecemer 1
+# Tecemer Lab 1
 
-Este repositorio contiene los trabajos que voy desarrollando en el curso de **Tecnologías Emergentes (IS046B)**. Para tener los ejercicios ordenados, los fui separando por semanas. En cada carpeta está el código y un LÉAME con una explicación de lo que se trabajó y cómo ejecutarlo.
+Proyecto de práctica desarrollado en Python para el curso de Tecnologías Emergentes. En este proyecto se trabaja la estructura `src-layout`, la instalación editable y buenas prácticas de código.
 
-## Trabajos por semana
+## Instalación
 
-| Semana | ¿Qué trabajé? | Documentación |
-|---|---|---|
-| 1 | Configuración del proyecto, Python, NumPy y ejercicios iniciales. | [Ver Semana 1](semana01/README.md) |
-| 2 | Consulta de datos del clima de Huancayo usando Open-Meteo y análisis con Pandas. | [Ver Semana 2](semana02/README.md) |
-| 3 | Un programa para organizar archivos y pruebas con pytest. | [Ver Semana 3](semana03/README.md) |
-| 4 | Preparación de datos y una red neuronal para clasificar días lluviosos. | [Ver Semana 4](semana04/README.md) |
-| 5 | Ejercicios de preprocesamiento, MLP, CNN, RNN y evaluación de modelos. | [Ver Semana 5](semana05/README.md) |
+### 1. Crear el entorno virtual
 
-## Cómo preparar el proyecto
-
-Necesitas tener Python 3.10 o una versión posterior. Abre una terminal en la carpeta del repositorio y crea un entorno virtual:
+Desde la carpeta principal del proyecto, ejecuta:
 
 ```bash
 python -m venv .venv
 ```
 
-En Windows PowerShell, actívalo con:
+### 2. Activar el entorno virtual
+
+En Windows PowerShell:
 
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
 
-Después instala las dependencias y el proyecto en modo editable:
+### 3. Instalar el proyecto en modo editable
+
+Con el entorno virtual activado:
 
 ```bash
-python -m pip install -r requirements.txt
-python -m pip install -e .
+pip install -e .
 ```
 
-## Ejecutar la aplicación
+## Ejemplo de uso
 
-Desde la carpeta principal puedes ejecutar:
+Para ejecutar la aplicación, desde la carpeta principal del proyecto utiliza:
 
 ```bash
-python -m tecemer_lab1.main
+python src/tecemer_lab1/app.py
 ```
 
-La aplicación consulta una API pública de chistes, por lo que necesitas conexión a internet. Los ejercicios de cada semana tienen sus propios comandos; revisa el LÉAME de la carpeta antes de ejecutarlos.
+La aplicación se ejecutará y mostrará el resultado directamente en la terminal.
 
-## Cómo está organizado
+## Estructura del proyecto
 
-- `semana01/` a `semana05/`: ejercicios y archivos de cada semana.
-- `src/tecemer_lab1/`: código de la aplicación principal.
-- `requirements.txt`: bibliotecas que utiliza el proyecto.
-- `pyproject.toml`: configuración del paquete de Python.
-- `.gitignore`: archivos locales que no se suben al repositorio.
+```text
+tecemer-lab1/
+├── src/
+│   └── tecemer_lab1/
+│       ├── __init__.py
+│       └── app.py
+├── .venv/
+├── .gitignore
+├── pyproject.toml
+├── requirements.txt
+└── README.md
+```
 
-## Datos del curso
+## Autor
 
-**Curso:** Tecnologías Emergentes — IS046B  
-**Autor:** Richard Torres Areche  
+Richard torres areche46824
+
+## Curso
+
+Tecnologías Emergentes — IS046B
+
+## Flujo de datos — Semana 2
+
+### Fuente
+
+Los datos meteorológicos se obtienen mediante la API Open-Meteo para la ciudad de Huancayo.
+
+### Transformación
+
+Los datos se almacenan en formato JSON y CSV. Luego se procesan utilizando Pandas para convertir las fechas, calcular la amplitud térmica, identificar los días lluviosos y clasificar las temperaturas en las categorías "cálido" y "templado".
+
+### Salida
+
+Se generan los siguientes archivos:
+
+- `pronostico_huancayo.json`
+- `pronostico_huancayo.csv`
+- `pronostico_huancayo_procesado.csv`
+- `resumen_por_categoria.csv`
+
+## Cierre de la Unidad I — Semana 3
+
+Herramienta de automatización: `organizador.py` clasifica y mueve archivos de una carpeta en subcarpetas por tipo (Documentos, Imagenes, Videos, Comprimidos, Otros), con modo de simulacion (`--dry-run`) mediante `argparse`.
+
+Uso:
+
+```bash
+python organizador.py <carpeta> [--dry-run]
+```
+
+## Cierre de la Unidad I — Semana 4
+
+En esta semana trabajé con datos del clima para preparar un clasificador de días lluviosos. Se preparan los datos, se entrena un modelo MLP y se comparan sus resultados con una regresión logística. Los archivos y las instrucciones están en la carpeta [semana04](semana04/README.md).
+
+## Cierre de la Unidad I — Semana 5
+
+### Ejercicios de redes neuronales
+
+- `Ejercicio_01_Preprocesamiento_Exploracion_Datos.ipynb`: preprocesamiento y exploración de datos.
+- `Ejercicio_02_Perceptron_MLP.ipynb`: perceptrón simple y perceptrón multicapa (MLP).
+
+En esta semana también trabajé con ejercicios de CNN, RNN, procesamiento de lenguaje natural y evaluación de modelos. Los notebooks y las instrucciones están en la carpeta [semana05](semana05/README.md).
+
+Material desarrollado en Google Colab para comprender el procesamiento de datos y los fundamentos de las redes neuronales.
