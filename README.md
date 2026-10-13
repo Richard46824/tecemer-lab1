@@ -1,18 +1,24 @@
- # Tecemer Lab 1
+# Tecemer Lab 1 — Tecnologías Emergentes
 
-Proyecto de práctica desarrollado en Python para el curso de Tecnologías Emergentes. En este proyecto se trabaja la estructura `src-layout`, la instalación editable y buenas prácticas de código.
+Repositorio de prácticas del curso **Tecnologías Emergentes (IS046B)**. El contenido está organizado por semanas para localizar rápidamente el código, los datos y las actividades.
+
+## Índice de prácticas
+
+| Semana | Contenido | Carpeta |
+|---|---|---|
+| 1 | Estructura del proyecto, PEP 8, manejo de errores y ejercicios introductorios de NumPy | [semana01](semana01/README.md) |
+| 2 | API Open-Meteo, datos de Huancayo, JSON/CSV y análisis con Pandas | [semana02](semana02/README.md) |
+| 3 | Organizador de archivos, argumentos de terminal y pruebas con pytest | [semana03](semana03/README.md) |
+| 4 | Preparación de datos y clasificación de lluvia con regresión logística y MLP | [semana04](semana04/README.md) |
+| 5 | Notebooks de redes neuronales, CNN, RNN, NLP y evaluación de modelos | [semana05](semana05/README.md) |
 
 ## Instalación
 
-### 1. Crear el entorno virtual
-
-Desde la carpeta principal del proyecto, ejecuta:
+Se requiere Python 3.10 o superior.
 
 ```bash
 python -m venv .venv
 ```
-
-### 2. Activar el entorno virtual
 
 En Windows PowerShell:
 
@@ -20,76 +26,33 @@ En Windows PowerShell:
 .venv\Scripts\Activate.ps1
 ```
 
-### 3. Instalar el proyecto en modo editable
-
-Con el entorno virtual activado:
+Instala las dependencias del proyecto:
 
 ```bash
+pip install -r requirements.txt
 pip install -e .
 ```
 
-## Ejemplo de uso
+## Ejecutar la aplicación principal
 
-Para ejecutar la aplicación, desde la carpeta principal del proyecto utiliza:
-
-```bash
-python src/tecemer_lab1/app.py
-```
-
-La aplicación se ejecutará y mostrará el resultado directamente en la terminal.
-
-## Estructura del proyecto
-
-```text
-tecemer-lab1/
-├── src/
-│   └── tecemer_lab1/
-│       ├── __init__.py
-│       └── app.py
-├── .venv/
-├── .gitignore
-├── pyproject.toml
-├── requirements.txt
-└── README.md
-```
-
-## Autor
-
-Richard torres areche46824
-
-## Curso
-
-Tecnologías Emergentes — IS046B
-## Flujo de datos — Semana 2
-
-### Fuente
-Los datos meteorológicos se obtienen mediante la API Open-Meteo para la ciudad de Huancayo.
-
-### Transformación
-Los datos se almacenan en formato JSON y CSV. Luego se procesan utilizando Pandas para convertir las fechas, calcular la amplitud térmica, identificar los días lluviosos y clasificar las temperaturas en las categorías "cálido" y "templado".
-
-### Salida
-Se generan los siguientes archivos:
-
-- `pronostico_huancayo.json`
-- `pronostico_huancayo.csv`
-- `pronostico_huancayo_procesado.csv`
-- `resumen_por_categoria.csv`
-## Cierre de la Unidad I — Semana 3
-
-Herramienta de automatización: organizador.py clasifica y mueve archivos
-de una carpeta en subcarpetas por tipo (Documentos, Imagenes, Videos,
-Comprimidos, Otros), con modo de simulacion (--dry-run) mediante argparse.
-
-Uso:
+Desde la raíz del repositorio:
 
 ```bash
-python organizador.py <carpeta> [--dry-run]
-## Cierre de la Unidad I — Semana 5
+python -m tecemer_lab1.main
+```
 
-### Ejercicios de redes neuronales
+La aplicación consulta una API pública de chistes. Requiere conexión a internet.
 
-- `Ejercicio_01_Preprocesamiento_Exploracion_Datos.ipynb`: preprocesamiento y exploración de datos.
-- `Ejercicio_02_Perceptron_MLP.ipynb`: perceptrón simple y perceptrón multicapa (MLP).
+## Estructura
 
-Material desarrollado en Google Colab para comprender el procesamiento de datos y los fundamentos de las redes neuronales.
+- `semana01/` a `semana05/`: prácticas organizadas por semana.
+- `src/tecemer_lab1/`: paquete Python principal; se conserva el diseño `src-layout`.
+- `requirements.txt`: dependencias del entorno.
+- `pyproject.toml`: configuración e información del paquete.
+- `.gitignore`: exclusiones de archivos locales y generados.
+
+Los archivos de datos y modelos generados por las prácticas se mantienen junto a la semana correspondiente. Consulta el README de cada semana para conocer los comandos de ejecución.
+
+## Autor y curso
+
+Prácticas académicas de Tecnologías Emergentes — IS046B.
