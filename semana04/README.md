@@ -29,6 +29,14 @@ El trabajo comprende la preparación de los datos, el entrenamiento de una red n
 - `curvas_entrenamiento_lluvia.png` y `curvas_entrenamiento_sintetico.png`: curvas generadas durante el entrenamiento.
 - `tests/test_preparacion.py`: pruebas automatizadas.
 
+## Dependencias adicionales
+
+Además de las dependencias generales del repositorio, los ejercicios de esta semana necesitan scikit-learn, TensorFlow y Matplotlib. Instálalas en el entorno virtual antes de entrenar:
+
+```bash
+python -m pip install scikit-learn tensorflow matplotlib
+```
+
 ## Ejecución y pruebas
 
 Abre la terminal dentro de esta carpeta para respetar las rutas relativas de los scripts:
@@ -40,4 +48,4 @@ python clasificador_lluvia.py
 python -m pytest tests/ -v
 ```
 
-Ejecuta los pasos según los archivos de datos disponibles y las dependencias instaladas. El entrenamiento requiere las bibliotecas indicadas en `requirements.txt`.
+Ejecuta los pasos según los archivos de datos disponibles. El entrenamiento requiere las bibliotecas indicadas arriba.
