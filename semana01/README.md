@@ -1,21 +1,20 @@
-# Semana 1 — Fundamentos y configuración
+# Semana 1 — Primeros ejercicios
 
-Esta carpeta reúne ejercicios introductorios y material asociado a la configuración del proyecto.
+En esta semana empecé a trabajar con la estructura del proyecto y realicé ejercicios básicos con Python y NumPy. También se revisaron buenas prácticas de código y la organización del paquete.
 
-## Contenido
+## Archivos de esta semana
 
-- `numpy_demo.py`: demostración básica de operaciones con NumPy.
-- `mini_reto.py`: estadísticas descriptivas de un arreglo de temperaturas.
-- La estructura principal del paquete se encuentra en `../src/tecemer_lab1/`.
-- El historial del repositorio registra la configuración inicial, el manejo de errores, el formato PEP 8 y la estructura `src-layout`.
+- `numpy_demo.py`: contiene ejemplos sencillos para practicar operaciones con NumPy.
+- `mini_reto.py`: ejercicio de estadísticas descriptivas usando un arreglo de temperaturas.
+- `../src/tecemer_lab1/`: carpeta donde está el código de la aplicación principal.
 
-## Ejecutar los ejercicios
+## Cómo ejecutar los ejercicios
 
-Desde la raíz del repositorio:
+Abre la terminal en la carpeta principal del repositorio y ejecuta:
 
 ```bash
 python semana01/numpy_demo.py
 python semana01/mini_reto.py
 ```
 
-Para ejecutar la aplicación del paquete, consulta el README principal.
+Puedes ejecutar cada archivo por separado. Si quieres iniciar la aplicación principal, revisa las instrucciones del [LÉAME principal](../README.md).
