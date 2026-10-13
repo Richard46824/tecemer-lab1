@@ -89,3 +89,11 @@ Uso:
 ```bash
 python organizador.py <carpeta> [--dry-run]
 ```
+
+## Semana 4 — Clasificación de lluvia
+
+En esta semana se prepararon datos meteorológicos de Huancayo y se entrenó un modelo de aprendizaje automático para clasificar días lluviosos. Se trabajó con una red neuronal MLP y se compararon sus resultados con una regresión logística. También se guardaron el modelo y el escalador para realizar predicciones.
+
+## Semana 5 — Redes neuronales
+
+Se desarrollaron notebooks prácticos sobre preprocesamiento de datos, perceptrón y MLP, redes convolucionales (CNN), redes recurrentes (RNN), procesamiento de lenguaje natural y evaluación de modelos. Los ejercicios se prepararon para ejecutarse en Google Colab, revisando los resultados y las métricas de cada práctica.
