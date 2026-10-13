@@ -1,17 +1,17 @@
-# Semana 2 — API y análisis de datos meteorológicos
+# Semana 2 — Datos del clima
 
-Esta práctica consulta Open-Meteo para obtener el pronóstico de Huancayo y procesa los datos con Python y Pandas.
+En esta práctica trabajé con datos meteorológicos de Huancayo. Primero consulté la API de Open-Meteo y guardé la información; después usé Python y Pandas para revisar y resumir los datos.
 
-## Archivos principales
+## Archivos que utilicé
 
-- `clima.py`: consulta la API y guarda los datos originales en JSON y CSV.
-- `analisis.py`: calcula la amplitud térmica, clasifica temperaturas y genera resúmenes.
-- `pronostico_huancayo.json` y `pronostico_huancayo.csv`: datos obtenidos.
-- `pronostico_huancayo_procesado.csv` y `resumen_por_categoria.csv`: resultados del análisis.
+- `clima.py`: consulta la API y guarda la información en archivos JSON y CSV.
+- `analisis.py`: lee los datos y realiza cálculos y resúmenes de las temperaturas.
+- `pronostico_huancayo.json` y `pronostico_huancayo.csv`: guardan los datos obtenidos.
+- `pronostico_huancayo_procesado.csv` y `resumen_por_categoria.csv`: contienen resultados del análisis.
 
-## Ejecución
+## Cómo ejecutar
 
-Abre una terminal en la raíz del repositorio y ejecuta:
+Abre una terminal en la carpeta principal y entra a esta semana:
 
 ```bash
 cd semana02
@@ -19,4 +19,4 @@ python clima.py
 python analisis.py
 ```
 
-Ejecuta primero `clima.py` para generar los datos que necesita `analisis.py`. La consulta requiere conexión a internet. Ejecutar el análisis desde esta carpeta permite que las rutas relativas a los CSV funcionen correctamente.
+Ejecuta primero `clima.py`, porque genera los archivos que necesita `analisis.py`. Para consultar la API necesitas conexión a internet. Ejecuta los comandos desde esta carpeta para que funcionen las rutas de los archivos.
