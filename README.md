@@ -1,68 +1,91 @@
-# Laboratorio Tecemer 1
+# Tecemer Lab 1
 
-Prácticas del curso Tecnologías Emergentes (IS046B), organizadas por semanas.
+Proyecto de práctica desarrollado en Python para el curso de Tecnologías Emergentes. En este proyecto se trabaja la estructura `src-layout`, la instalación editable y buenas prácticas de código.
 
-## Semana 1: Configuración y NumPy
+## Instalación
 
-Se trabajó la estructura del proyecto en Python, el formato PEP 8 y ejercicios introductorios con NumPy.
+### 1. Crear el entorno virtual
 
-Archivos principales: `numpy_demo.py` y `mini_reto.py`.
-
-## Semana 2: Datos meteorológicos
-
-Se consultó la API Open-Meteo para obtener el pronóstico de Huancayo y analizarlo con Pandas.
-
-Archivos principales: `clima.py`, `analisis.py` y los archivos de datos JSON/CSV generados.
-
-Para ejecutar:
+Desde la carpeta principal del proyecto, ejecuta:
 
 ```bash
-cd semana02
-python clima.py
-python analisis.py
+python -m venv .venv
 ```
 
-## Semana 3: Organizador de archivos
+### 2. Activar el entorno virtual
 
-Se creó un programa para organizar archivos por extensión y se añadieron pruebas con pytest.
-
-Archivo principal: `organizador.py`.
-
-Primero se puede simular el proceso:
-
-```bash
-python semana03/organizador.py "RUTA_A_LA_CARPETA" --dry-run
-```
-
-Pruebas:
-
-```bash
-pytest semana03/test_organizador.py
-```
-
-## Instalación del proyecto
-
-Crear y activar el entorno virtual en Windows PowerShell:
+En Windows PowerShell:
 
 ```powershell
-python -m venv .venv
 .venv\Scripts\Activate.ps1
+```
+
+### 3. Instalar el proyecto en modo editable
+
+Con el entorno virtual activado:
+
+```bash
 pip install -e .
 ```
 
-## Estructura
+## Ejemplo de uso
+
+Para ejecutar la aplicación, desde la carpeta principal del proyecto utiliza:
+
+```bash
+python src/tecemer_lab1/app.py
+```
+
+La aplicación se ejecutará y mostrará el resultado directamente en la terminal.
+
+## Estructura del proyecto
 
 ```text
 tecemer-lab1/
-├── semana01/
-├── semana02/
-├── semana03/
-├── semana04/
-├── semana05/
 ├── src/
+│   └── tecemer_lab1/
+│       ├── __init__.py
+│       └── app.py
+├── .venv/
+├── .gitignore
 ├── pyproject.toml
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
-**Autor:** Richard Torres Areche46824  
-**Curso:** Tecnologías Emergentes — IS046B
+## Autor
+
+Richard torres areche46824
+
+## Curso
+
+Tecnologías Emergentes — IS046B
+
+## Flujo de datos — Semana 2
+
+### Fuente
+
+Los datos meteorológicos se obtienen mediante la API Open-Meteo para la ciudad de Huancayo.
+
+### Transformación
+
+Los datos se almacenan en formato JSON y CSV. Luego se procesan utilizando Pandas para convertir las fechas, calcular la amplitud térmica, identificar los días lluviosos y clasificar las temperaturas en las categorías "cálido" y "templado".
+
+### Salida
+
+Se generan los siguientes archivos:
+
+- `pronostico_huancayo.json`
+- `pronostico_huancayo.csv`
+- `pronostico_huancayo_procesado.csv`
+- `resumen_por_categoria.csv`
+
+## Cierre de la Unidad I — Semana 3
+
+Herramienta de automatización: `organizador.py` clasifica y mueve archivos de una carpeta en subcarpetas por tipo (Documentos, Imagenes, Videos, Comprimidos, Otros), con modo de simulacion (`--dry-run`) mediante `argparse`.
+
+Uso:
+
+```bash
+python organizador.py <carpeta> [--dry-run]
+```
