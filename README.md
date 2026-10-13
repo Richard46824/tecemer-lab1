@@ -1,58 +1,57 @@
-# Tecemer Lab 1 — Tecnologías Emergentes
+# Laboratorio Tecemer 1
 
-Repositorio de prácticas del curso **Tecnologías Emergentes (IS046B)**. El contenido está organizado por semanas para localizar rápidamente el código, los datos y las actividades.
+Este repositorio contiene los trabajos que voy desarrollando en el curso de **Tecnologías Emergentes (IS046B)**. Para tener los ejercicios ordenados, los fui separando por semanas. En cada carpeta está el código y un LÉAME con una explicación de lo que se trabajó y cómo ejecutarlo.
 
-## Índice de prácticas
+## Trabajos por semana
 
-| Semana | Contenido | Carpeta |
+| Semana | ¿Qué trabajé? | Documentación |
 |---|---|---|
-| 1 | Estructura del proyecto, PEP 8, manejo de errores y ejercicios introductorios de NumPy | [semana01](semana01/README.md) |
-| 2 | API Open-Meteo, datos de Huancayo, JSON/CSV y análisis con Pandas | [semana02](semana02/README.md) |
-| 3 | Organizador de archivos, argumentos de terminal y pruebas con pytest | [semana03](semana03/README.md) |
-| 4 | Preparación de datos y clasificación de lluvia con regresión logística y MLP | [semana04](semana04/README.md) |
-| 5 | Notebooks de redes neuronales, CNN, RNN, NLP y evaluación de modelos | [semana05](semana05/README.md) |
+| 1 | Configuración del proyecto, Python, NumPy y ejercicios iniciales. | [Ver Semana 1](semana01/README.md) |
+| 2 | Consulta de datos del clima de Huancayo usando Open-Meteo y análisis con Pandas. | [Ver Semana 2](semana02/README.md) |
+| 3 | Un programa para organizar archivos y pruebas con pytest. | [Ver Semana 3](semana03/README.md) |
+| 4 | Preparación de datos y una red neuronal para clasificar días lluviosos. | [Ver Semana 4](semana04/README.md) |
+| 5 | Ejercicios de preprocesamiento, MLP, CNN, RNN y evaluación de modelos. | [Ver Semana 5](semana05/README.md) |
 
-## Instalación
+## Cómo preparar el proyecto
 
-Se requiere Python 3.10 o superior.
+Necesitas tener Python 3.10 o una versión posterior. Abre una terminal en la carpeta del repositorio y crea un entorno virtual:
 
 ```bash
 python -m venv .venv
 ```
 
-En Windows PowerShell:
+En Windows PowerShell, actívalo con:
 
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
 
-Instala las dependencias del proyecto:
+Después instala las dependencias y el proyecto en modo editable:
 
 ```bash
-pip install -r requirements.txt
-pip install -e .
+python -m pip install -r requirements.txt
+python -m pip install -e .
 ```
 
-## Ejecutar la aplicación principal
+## Ejecutar la aplicación
 
-Desde la raíz del repositorio:
+Desde la carpeta principal puedes ejecutar:
 
 ```bash
 python -m tecemer_lab1.main
 ```
 
-La aplicación consulta una API pública de chistes. Requiere conexión a internet.
+La aplicación consulta una API pública de chistes, por lo que necesitas conexión a internet. Los ejercicios de cada semana tienen sus propios comandos; revisa el LÉAME de la carpeta antes de ejecutarlos.
 
-## Estructura
+## Cómo está organizado
 
-- `semana01/` a `semana05/`: prácticas organizadas por semana.
-- `src/tecemer_lab1/`: paquete Python principal; se conserva el diseño `src-layout`.
-- `requirements.txt`: dependencias del entorno.
-- `pyproject.toml`: configuración e información del paquete.
-- `.gitignore`: exclusiones de archivos locales y generados.
+- `semana01/` a `semana05/`: ejercicios y archivos de cada semana.
+- `src/tecemer_lab1/`: código de la aplicación principal.
+- `requirements.txt`: bibliotecas que utiliza el proyecto.
+- `pyproject.toml`: configuración del paquete de Python.
+- `.gitignore`: archivos locales que no se suben al repositorio.
 
-Los archivos de datos y modelos generados por las prácticas se mantienen junto a la semana correspondiente. Consulta el README de cada semana para conocer los comandos de ejecución.
+## Datos del curso
 
-## Autor y curso
-
-Prácticas académicas de Tecnologías Emergentes — IS046B.
+**Curso:** Tecnologías Emergentes — IS046B  
+**Autor:** Richard Torres Areche  
