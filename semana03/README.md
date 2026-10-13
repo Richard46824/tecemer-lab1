@@ -1,30 +1,30 @@
-# Semana 3 — Automatización y pruebas
+# Semana 3 — Organizador de archivos
 
-Esta práctica desarrolla un organizador que clasifica archivos por extensión y puede simular los movimientos antes de ejecutarlos.
+En esta semana hice un programa para ordenar archivos según su extensión. Antes de moverlos, puedo probar qué cambios realizaría usando la opción `--dry-run`. También preparé pruebas automáticas con pytest.
 
 ## Archivos
 
-- `organizador.py`: lógica de clasificación y movimiento de archivos.
-- `test_organizador.py`: pruebas automatizadas con pytest.
+- `organizador.py`: contiene el programa que clasifica y mueve los archivos.
+- `test_organizador.py`: comprueba el funcionamiento del organizador.
 
-## Uso
+## Cómo probar el programa
 
-Desde la raíz del repositorio, primero simula los cambios:
+Desde la carpeta principal del repositorio, ejecuta el comando de abajo y reemplaza la ruta por una carpeta de prueba:
 
 ```bash
 python semana03/organizador.py "RUTA_A_LA_CARPETA" --dry-run
 ```
 
-Si el resultado es correcto, ejecuta sin `--dry-run` para mover los archivos:
+Primero revisa el resultado de la simulación. Si todo está bien, puedes ejecutar el programa sin `--dry-run` para realizar los movimientos:
 
 ```bash
 python semana03/organizador.py "RUTA_A_LA_CARPETA"
 ```
 
-Reemplaza `RUTA_A_LA_CARPETA` por una carpeta de prueba. Se recomienda revisar la simulación antes de mover archivos.
-
-## Ejecutar pruebas
+## Ejecutar las pruebas
 
 ```bash
 pytest semana03/test_organizador.py
 ```
+
+Es mejor probar con una carpeta que contenga archivos de ejemplo y revisar la simulación antes de moverlos.
