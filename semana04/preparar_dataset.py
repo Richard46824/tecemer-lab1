@@ -2,6 +2,7 @@
 
 import numpy as np
 import pandas as pd
+import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
@@ -60,6 +61,10 @@ def main():
     escalador = StandardScaler()
     X_train_esc = escalador.fit_transform(X_train)
     X_test_esc = escalador.transform(X_test)
+
+    # Guardar el escalador para transformar observaciones nuevas igual que train.
+    joblib.dump(escalador, "escalador_lluvia.joblib")
+    print("Escalador guardado en escalador_lluvia.joblib")
 
     print(f"\nTamaño de entrenamiento: {X_train_esc.shape}")
     print(f"Tamaño de prueba: {X_test_esc.shape}")
