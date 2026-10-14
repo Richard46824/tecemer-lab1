@@ -1,3 +1,4 @@
+import time
 import numpy as np
 
 a = np.array([1, 2, 3, 4, 5])
@@ -9,7 +10,6 @@ print("Array base:", a)
 print("Matriz de ceros:\n", ceros)
 print("Rango:", rango)
 print("Espaciado:", espaciado)
-import time
 
 n = 1_000_000
 lista = list(range(n))

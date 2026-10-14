@@ -15,7 +15,8 @@ temperaturas_nuevas = np.array([
     [14.0, 4.0],
 ])
 
-# Mantener el mismo orden de características utilizado durante el entrenamiento.
+# Mantener el mismo orden de características utilizado durante el
+# entrenamiento.
 amplitud_termica = temperaturas_nuevas[:, 0] - temperaturas_nuevas[:, 1]
 X_nuevo = np.column_stack(
     [temperaturas_nuevas[:, 0], temperaturas_nuevas[:, 1], amplitud_termica]

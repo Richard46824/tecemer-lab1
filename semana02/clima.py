@@ -23,7 +23,8 @@ def obtener_pronostico():
     respuesta.raise_for_status()
     datos = respuesta.json()
     if "daily" not in datos:
-        raise ValueError("La respuesta de Open-Meteo no contiene datos diarios.")
+        raise ValueError(
+            "La respuesta de Open-Meteo no contiene datos diarios.")
     return datos
 
 
@@ -54,9 +55,11 @@ def main():
     try:
         datos = obtener_pronostico()
     except requests.exceptions.RequestException as error:
-        raise SystemExit(f"No se pudo obtener el pronóstico: {error}") from error
+        raise SystemExit(
+            f"No se pudo obtener el pronóstico: {error}") from error
     except ValueError as error:
-        raise SystemExit(f"Respuesta de pronóstico no válida: {error}") from error
+        raise SystemExit(
+            f"Respuesta de pronóstico no válida: {error}") from error
 
     print(json.dumps(datos["daily"], indent=2, ensure_ascii=False))
     print("Claves de primer nivel:", list(datos.keys()))

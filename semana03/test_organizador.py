@@ -1,5 +1,6 @@
 """Pruebas para el organizador de archivos."""
 
+from organizador import clasificar, organizar_carpeta
 import sys
 from pathlib import Path
 
@@ -7,8 +8,6 @@ import pytest
 
 # Permite ejecutar pytest desde la raíz del repositorio.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from organizador import clasificar, organizar_carpeta
 
 
 def test_clasificar_reconoce_imagen(tmp_path):
@@ -24,7 +23,8 @@ def test_organizar_mueve_archivo_a_subcarpeta(tmp_path):
     total = organizar_carpeta(tmp_path)
 
     assert total == 1
-    assert (tmp_path / "Imagenes" / "foto.jpg").read_text(encoding="utf-8") == "contenido"
+    assert (tmp_path / "Imagenes" /
+            "foto.jpg").read_text(encoding="utf-8") == "contenido"
     assert not archivo.exists()
 
 

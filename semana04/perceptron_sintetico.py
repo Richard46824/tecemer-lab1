@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+import matplotlib
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -38,9 +40,7 @@ modelo.compile(
     loss="binary_crossentropy",
     metrics=["accuracy"],
 )
-import matplotlib
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 # 4. Entrenar el modelo
 historial = modelo.fit(
     X_train, y_train,
