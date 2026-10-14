@@ -90,6 +90,29 @@ Uso:
 python organizador.py <carpeta> [--dry-run]
 ```
 
+## Cierre de la Unidad I — Semana 3
+
+Herramienta de automatización: `organizador.py` clasifica y mueve archivos
+de una carpeta en subcarpetas por tipo (Documentos, Imagenes, Videos,
+Comprimidos, Otros), con modo de simulación (`--dry-run`) mediante argparse.
+
+Uso:
+
+```text
+python organizador.py <carpeta> [--dry-run]
+```
+
+Pruebas: `test_organizador.py` cubre clasificación, movimiento real y modo
+simulación, usando la fixture `tmp_path` de pytest para no afectar el
+sistema de archivos real.
+
+Ejecutar con:
+
+```text
+pytest -v
+```
+
+
 ## Semana 4 — Clasificación de lluvia
 
 En esta semana se prepararon datos meteorológicos de Huancayo y se entrenó un modelo de aprendizaje automático para clasificar días lluviosos. Se trabajó con una red neuronal MLP y se compararon sus resultados con una regresión logística. También se guardaron el modelo y el escalador para realizar predicciones.
