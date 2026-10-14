@@ -1,0 +1,14 @@
+
+{
+  "nombre_modelo": "clasificador_lluvia_huancayo",
+  "version": "1.0.0",
+  "origen": "semana04/modelo_lluvia.keras",
+  "tipo": "clasificacion_binaria",
+  "caracteristicas_modelo": [
+    "temp_max",
+    "temp_min",
+    "amplitud_termica"
+  ],
+  "umbral_clasificacion": 0.5,
+  "nota": "El viento se valida en la API, pero no se utiliza como entrada del modelo."
+}
