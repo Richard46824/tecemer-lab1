@@ -1,8 +1,9 @@
+
 """Prepara el dataset meteorológico para clasificar días lluviosos."""
 
+import joblib
 import numpy as np
 import pandas as pd
-import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
@@ -26,7 +27,9 @@ def main():
     print(df.isnull().sum())
 
     # 2. Construir la variable objetivo binaria.
-    df["dia_lluvioso"] = df["precipitacion"].apply(calcular_dia_lluvioso)
+    df["dia_lluvioso"] = df["precipitacion"].apply(
+        calcular_dia_lluvioso
+    )
 
     # 3. Crear una característica derivada.
     df["amplitud_termica"] = df["temp_max"] - df["temp_min"]
@@ -36,7 +39,10 @@ def main():
     X = df[columnas_features].copy()
     y = df["dia_lluvioso"].copy()
 
-    print("\nDistribución de la variable objetivo (0 = no lluvioso, 1 = lluvioso):")
+    print(
+        "\nDistribución de la variable objetivo "
+        "(0 = no lluvioso, 1 = lluvioso):"
+    )
     print(y.value_counts())
     print("\nEstadísticas descriptivas de las características:")
     print(X.describe())
@@ -62,7 +68,7 @@ def main():
     X_train_esc = escalador.fit_transform(X_train)
     X_test_esc = escalador.transform(X_test)
 
-    # Guardar el escalador para transformar observaciones nuevas igual que train.
+    # Guardar el escalador para transformar observaciones nuevas.
     joblib.dump(escalador, "escalador_lluvia.joblib")
     print("Escalador guardado en escalador_lluvia.joblib")
 
